@@ -1,0 +1,1480 @@
+\documentclass[12pt,a4paper]{report}
+
+% Package imports
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{enumitem}
+\usepackage{tocloft}
+
+% Page setup
+\geometry{margin=1in}
+\setstretch{1.5}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Code listing setup
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+% Custom commands
+\newcommand{\TODO}[1]{\textcolor{red}{\textbf{TODO: #1}}}
+\newcommand{\code}[1]{\texttt{#1}}
+
+% Title page information
+\title{
+    \vspace{-2cm}
+    \includegraphics[width=0.3\textwidth]{university_logo.png} \\[1cm] % Add your university logo
+    \Large\textbf{Medical Imaging with Deep Learning and Computer Vision} \\[0.5cm]
+    \Large\textbf{A Comprehensive Study Report} \\[1cm]
+    \normalsize Submitted in partial fulfillment of the requirements \\
+    for the degree of [Your Degree] \\[1cm]
+}
+
+\author{
+    \Large [Your Name] \\[0.3cm]
+    \normalsize [Your Student ID] \\[0.3cm]
+    \normalsize [Your Department] \\[0.3cm]
+    \normalsize [University Name] \\[1cm]
+    \normalsize Under the guidance of \\[0.3cm]
+    \Large [Supervisor Name] \\[0.3cm]
+    \normalsize [Supervisor Designation]
+}
+
+\date{\today}
+
+\begin{document}
+
+% Title page
+\maketitle
+
+% Declaration page
+\chapter*{Declaration}
+\addcontentsline{toc}{chapter}{Declaration}
+
+I hereby declare that this report titled \textbf{"Medical Imaging with Deep Learning and Computer Vision: A Comprehensive Study Report"} is a record of my own work carried out under the supervision of [Supervisor Name]. The work presented in this report has not been submitted elsewhere for any degree or diploma.
+
+\vspace{2cm}
+\begin{flushright}
+[Your Name] \\
+[Your Student ID] \\
+Date: \today
+\end{flushright}
+
+% Acknowledgments
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+
+% TODO: Add your acknowledgments here
+I would like to express my sincere gratitude to...
+
+% Abstract
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+% TODO: Add your abstract here (250-300 words)
+This report presents a comprehensive study of medical imaging applications using deep learning and computer vision techniques...
+
+% Table of contents
+\tableofcontents
+
+% List of figures
+\listoffigures
+
+% List of tables
+\listoftables
+
+% List of algorithms
+\listofalgorithms
+
+% Main content starts here
+\chapter{Executive Summary}
+
+% TODO: Add executive summary content (1-2 pages)
+\section{Overview of Research Journey}
+% Brief overview of the 2-month research journey
+
+\section{Key Achievements and Learning Outcomes}
+% Key achievements and learning outcomes
+
+\section{Summary of Practical Applications}
+% Summary of practical applications explored
+
+\chapter{Introduction}
+
+\section{Background and Motivation}
+
+\subsection{Importance of Medical Imaging in Healthcare}
+% TODO: Add content about importance of medical imaging
+
+\subsection{Role of AI/ML in Revolutionizing Medical Diagnosis}
+% TODO: Add content about AI/ML role
+
+\subsection{Challenges in Traditional Medical Image Analysis}
+% TODO: Add content about traditional challenges
+
+\section{Objectives}
+
+\subsection{Understanding Deep Learning Applications}
+% TODO: Add objectives content
+
+\subsection{Exploring Classification, Detection, and Segmentation}
+% TODO: Add objectives content
+
+\subsection{Hands-on Implementation}
+% TODO: Add objectives content
+
+\section{Scope of Work}
+
+\subsection{Literature Review of Research Papers}
+% TODO: Add scope content
+
+\subsection{Practical Implementation Projects}
+% TODO: Add scope content
+
+\subsection{Analysis of Different Medical Imaging Modalities}
+% TODO: Add scope content
+
+\chapter{Literature Review and Theoretical Foundation}
+
+\section{Deep Learning in Medical Imaging}
+
+\subsection{Overview of CNN Architectures}
+% TODO: Add content about CNN architectures
+
+\subsection{Transfer Learning in Medical Imaging}
+% TODO: Add content about transfer learning
+
+\subsection{Data Augmentation Techniques}
+% TODO: Add content about data augmentation
+
+\section{Computer Vision Tasks in Medical Context}
+
+\subsection{Medical Image Classification}
+
+\subsubsection{Disease Classification Approaches}
+% TODO: Add classification content
+
+\subsubsection{Multi-class vs Binary Classification}
+% TODO: Add classification content
+
+\subsubsection{Performance Metrics}
+% TODO: Add metrics content
+
+\subsection{Object Detection in Medical Images}
+
+\subsubsection{Lesion Detection Techniques}
+% TODO: Add detection content
+
+\subsubsection{YOLO and R-CNN Applications}
+% TODO: Add detection content
+
+\subsubsection{Bounding Box Regression}
+% TODO: Add detection content
+
+\subsection{Medical Image Segmentation}
+
+\subsubsection{Semantic vs Instance Segmentation}
+% TODO: Add segmentation content
+
+\subsubsection{U-Net and Variants}
+% TODO: Add U-Net content
+
+\subsubsection{Evaluation Metrics}
+% TODO: Add metrics content
+
+\section{Key Research Papers Reviewed}
+
+\subsection{Summary of Important Papers}
+% TODO: Add paper summaries
+
+\subsection{Evolution of Techniques}
+% TODO: Add evolution content
+
+\subsection{Current State-of-the-Art Methods}
+% TODO: Add SOTA content
+
+\chapter{Project Implementation: Polyp Segmentation in Endoscopic Colonoscopy}
+
+\section{Problem Statement and Clinical Context}
+
+\subsection{Clinical Significance}
+
+\subsubsection{Colorectal Cancer Prevention}
+% TODO: Add clinical significance content
+
+\subsubsection{Current Limitations in Manual Detection}
+% TODO: Add limitations content
+
+\subsubsection{Need for Automated Assistance}
+% TODO: Add automation need content
+
+\subsection{Technical Challenges}
+
+\subsubsection{Varying Polyp Characteristics}
+% TODO: Add technical challenges
+
+\subsubsection{Complex Background Textures}
+% TODO: Add background challenges
+
+\subsubsection{Real-time Processing Requirements}
+% TODO: Add real-time requirements
+
+\subsubsection{Class Imbalance Issues}
+% TODO: Add class imbalance content
+
+\subsection{Project Objectives}
+
+\subsubsection{Accurate Semantic Segmentation}
+% TODO: Add segmentation objectives
+
+\subsubsection{Multi-Modal Visualization}
+% TODO: Add visualization objectives
+
+\subsubsection{Interpretable AI System}
+% TODO: Add interpretability objectives
+
+\subsubsection{Interactive Interface}
+% TODO: Add interface objectives
+
+\section{Dataset and Data Engineering}
+
+\subsection{Dataset Characteristics}
+
+\subsubsection{Source and Structure}
+% TODO: Add dataset source information
+
+\begin{table}[H]
+\centering
+\caption{Dataset Characteristics}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Parameter} & \textbf{Value} \\
+\hline
+Source & Custom colonoscopy frame dataset \\
+\hline
+Format & PNG images and masks \\
+\hline
+Classes & Binary segmentation (background, polyp) \\
+\hline
+Split Strategy & 80-20 train-validation split \\
+\hline
+Total Images & [TODO: Add your dataset size] \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{RGB Encoding Strategy}
+% TODO: Add RGB encoding details
+
+\subsubsection{Split Strategy Implementation}
+% TODO: Add split strategy details
+
+\subsection{Data Preprocessing Pipeline}
+
+\subsubsection{Image Format Conversion}
+% TODO: Add conversion details
+
+\begin{lstlisting}[language=Python, caption=BGR to RGB Conversion]
+# Key preprocessing steps implemented:
+image = cv2.cvtColor(cv2.imread(image_path), cv2.COLOR_BGR2RGB)
+mask = cv2.cvtColor(cv2.imread(mask_path), cv2.COLOR_BGR2RGB)
+\end{lstlisting}
+
+\subsubsection{One-Hot Encoding Implementation}
+% TODO: Add one-hot encoding details
+
+\subsubsection{Standardization and Normalization}
+% TODO: Add standardization details
+
+\subsection{Data Augmentation Strategy}
+
+\subsubsection{Training Augmentations}
+% TODO: Add training augmentation details
+
+\begin{lstlisting}[language=Python, caption=Training Augmentation Pipeline]
+def get_training_augmentation():
+    train_transform = [
+        album.HorizontalFlip(p=0.5),
+    ]
+    return album.Compose(train_transform)
+\end{lstlisting}
+
+\subsubsection{Validation Augmentations}
+% TODO: Add validation augmentation details
+
+\subsubsection{Spatial Consistency Preservation}
+% TODO: Add consistency details
+
+\section{Model Architecture and Design}
+
+\subsection{Network Selection: DeepLabV3+}
+
+\subsubsection{Architecture Overview}
+% TODO: Add architecture overview
+
+\begin{figure}[H]
+\centering
+% TODO: Add DeepLabV3+ architecture diagram
+\includegraphics[width=0.8\textwidth]{deeplabv3_architecture.png}
+\caption{DeepLabV3+ Architecture Overview}
+\label{fig:deeplabv3}
+\end{figure}
+
+\subsubsection{Encoder Configuration}
+% TODO: Add encoder details
+
+\subsubsection{Decoder Benefits}
+% TODO: Add decoder benefits
+
+\subsection{Loss Function and Metrics}
+
+\subsubsection{Dice Loss Implementation}
+% TODO: Add Dice loss details
+
+\begin{equation}
+\text{Dice Loss} = 1 - \frac{2 \times |X \cap Y|}{|X| + |Y|}
+\end{equation}
+
+\subsubsection{IoU Metric Selection}
+% TODO: Add IoU metric details
+
+\subsubsection{Evaluation Strategy}
+% TODO: Add evaluation strategy
+
+\subsection{Training Configuration}
+
+\subsubsection{Optimizer Selection}
+% TODO: Add optimizer details
+
+\begin{table}[H]
+\centering
+\caption{Training Hyperparameters}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Parameter} & \textbf{Value} \\
+\hline
+Optimizer & Adam \\
+\hline
+Learning Rate & 8e-5 \\
+\hline
+Batch Size & 16 \\
+\hline
+Epochs & 15 \\
+\hline
+Scheduler & CosineAnnealingWarmRestarts \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Learning Rate Scheduling}
+% TODO: Add LR scheduling details
+
+\subsubsection{Hardware Configuration}
+% TODO: Add hardware details
+
+\section{Advanced Visualization and Interpretability}
+
+\subsection{Multi-Modal Output Generation}
+
+\subsubsection{Semantic Segmentation Output}
+% TODO: Add segmentation output details
+
+\subsubsection{Probability Heatmaps}
+% TODO: Add heatmap details
+
+\subsubsection{Bounding Box Detection}
+% TODO: Add bounding box details
+
+\subsubsection{Grad-CAM Analysis}
+% TODO: Add Grad-CAM details
+
+\subsection{Grad-CAM Implementation}
+
+\subsubsection{Target Layer Selection}
+% TODO: Add target layer details
+
+\subsubsection{Semantic Targeting Strategy}
+% TODO: Add targeting strategy
+
+\subsubsection{Visualization Pipeline}
+% TODO: Add visualization pipeline
+
+\subsubsection{Clinical Value Assessment}
+% TODO: Add clinical value
+
+\subsection{Bounding Box Generation}
+
+\subsubsection{Binary Mask Creation}
+% TODO: Add binary mask details
+
+\begin{lstlisting}[language=Python, caption=Bounding Box Generation Pipeline]
+def get_bounding_boxes(mask, target_class_idx=1, min_area=10):
+    # Binary mask creation from probability outputs
+    # Contour detection using OpenCV
+    # Minimum area filtering for noise reduction
+    # Rectangle fitting for precise localization
+\end{lstlisting}
+
+\subsubsection{Contour Detection Algorithm}
+% TODO: Add contour detection details
+
+\subsubsection{Noise Reduction Strategy}
+% TODO: Add noise reduction details
+
+\section{Interactive Interface Development}
+
+\subsection{Gradio Web Application}
+
+\subsubsection{Interface Design}
+% TODO: Add interface design details
+
+\subsubsection{Multi-Output Visualization}
+% TODO: Add multi-output details
+
+\subsubsection{User Experience Considerations}
+% TODO: Add UX details
+
+\subsection{Real-time Processing Pipeline}
+
+\subsubsection{Preprocessing Automation}
+% TODO: Add preprocessing automation
+
+\subsubsection{GPU-Accelerated Inference}
+% TODO: Add GPU inference details
+
+\subsubsection{Error Handling Implementation}
+% TODO: Add error handling details
+
+\section{Results and Performance Analysis}
+
+\subsection{Quantitative Results}
+
+\subsubsection{Final Performance Metrics}
+% TODO: Add your actual performance numbers
+
+\begin{table}[H]
+\centering
+\caption{Model Performance Results}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Metric} & \textbf{Value} \\
+\hline
+Final IoU Score & [TODO: Add your IoU score] \\
+\hline
+Dice Loss & [TODO: Add your loss value] \\
+\hline
+Training Time & [TODO: Add training time] \\
+\hline
+Best Epoch & [TODO: Add best epoch] \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Training Convergence Analysis}
+% TODO: Add convergence analysis
+
+\subsubsection{Model Selection Criteria}
+% TODO: Add model selection details
+
+\subsection{Qualitative Analysis}
+
+\subsubsection{Segmentation Quality Assessment}
+% TODO: Add quality assessment
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.3\textwidth}
+    \includegraphics[width=\textwidth]{sample_original.png}
+    \caption{Original Image}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+    \includegraphics[width=\textwidth]{sample_ground_truth.png}
+    \caption{Ground Truth}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+    \includegraphics[width=\textwidth]{sample_prediction.png}
+    \caption{Prediction}
+\end{subfigure}
+\caption{Sample Segmentation Results}
+\label{fig:sample_results}
+\end{figure}
+
+\subsubsection{False Positive Analysis}
+% TODO: Add false positive analysis
+
+\subsubsection{Edge Case Performance}
+% TODO: Add edge case analysis
+
+\subsection{Visualization Effectiveness}
+
+\subsubsection{Grad-CAM Insights}
+% TODO: Add Grad-CAM insights
+
+\subsubsection{Heatmap Interpretation}
+% TODO: Add heatmap interpretation
+
+\subsubsection{Localization Accuracy}
+% TODO: Add localization accuracy
+
+\section{Technical Implementation Details}
+
+\subsection{Libraries and Frameworks}
+
+\subsubsection{Deep Learning Stack}
+% TODO: Add DL stack details
+
+\subsubsection{Computer Vision Tools}
+% TODO: Add CV tools details
+
+\subsubsection{Deployment Framework}
+% TODO: Add deployment details
+
+\subsection{Code Architecture}
+
+\subsubsection{Modular Design Principles}
+% TODO: Add design principles
+
+\subsubsection{Reproducibility Measures}
+% TODO: Add reproducibility details
+
+\subsubsection{Scalability Considerations}
+% TODO: Add scalability details
+
+\section{Challenges and Solutions}
+
+\subsection{Technical Challenges Overcome}
+
+\subsubsection{Memory Management}
+% TODO: Add memory management details
+
+\subsubsection{Dimension Consistency}
+% TODO: Add dimension handling details
+
+\subsubsection{Color Space Issues}
+% TODO: Add color space details
+
+\subsection{Dataset-Specific Issues}
+
+\subsubsection{Class Imbalance Handling}
+% TODO: Add class imbalance solutions
+
+\subsubsection{Annotation Quality Control}
+% TODO: Add quality control details
+
+\subsubsection{Augmentation Balance}
+% TODO: Add augmentation balance details
+
+\subsection{Future Improvements Identified}
+
+\subsubsection{Advanced Augmentation Techniques}
+% TODO: Add future augmentation ideas
+
+\subsubsection{Architecture Exploration}
+% TODO: Add architecture improvements
+
+\subsubsection{Real-time Optimization}
+% TODO: Add optimization strategies
+
+\chapter{Brain MRI Analysis and Functional Connectivity}
+
+\section{Understanding fMRI Data}
+
+\subsection{Fundamentals of Functional MRI}
+% TODO: Add fMRI fundamentals
+
+\subsection{Time Series Data Characteristics}
+% TODO: Add time series characteristics
+
+\subsection{Preprocessing Requirements}
+% TODO: Add preprocessing requirements
+
+\section{Functional Connectivity Analysis}
+
+\subsection{Theory and Background}
+
+\subsubsection{Brain Functional Connectivity Concept}
+% TODO: Add connectivity concept
+
+\subsubsection{Network Neuroscience Principles}
+% TODO: Add network neuroscience
+
+\subsubsection{Clinical Applications}
+% TODO: Add clinical applications
+
+\subsection{fMRI to Connectivity Matrix Conversion}
+
+\subsubsection{Signal Extraction Process}
+% TODO: Add signal extraction details
+
+\subsubsection{Correlation-Based Measures}
+% TODO: Add correlation measures
+
+\subsubsection{Matrix Construction Methodology}
+% TODO: Add matrix construction
+
+\subsection{Implementation Process}
+
+\subsubsection{Software Tools Used}
+% TODO: Add software tools
+
+\subsubsection{Conversion Pipeline}
+% TODO: Add conversion pipeline
+
+\subsubsection{Quality Control Measures}
+% TODO: Add quality control
+
+\section{Results and Insights}
+
+\subsection{Connectivity Patterns Observed}
+% TODO: Add observed patterns
+
+\subsection{Visualization Techniques}
+% TODO: Add visualization techniques
+
+\subsection{Clinical Interpretations}
+% TODO: Add clinical interpretations
+
+\chapter{Technical Skills and Tools Acquired}
+
+\section{Deep Learning Frameworks and Libraries}
+
+\subsection{Core Deep Learning}
+
+\subsubsection{PyTorch Ecosystem}
+% TODO: Add PyTorch details
+
+\subsubsection{Segmentation Models PyTorch}
+% TODO: Add SMP details
+
+\subsubsection{Transfer Learning Implementation}
+% TODO: Add transfer learning details
+
+\subsection{Computer Vision and Image Processing}
+
+\subsubsection{OpenCV Applications}
+% TODO: Add OpenCV details
+
+\subsubsection{Albumentations Pipeline}
+% TODO: Add Albumentations details
+
+\subsubsection{NumPy Operations}
+% TODO: Add NumPy details
+
+\subsection{Visualization and Analysis}
+
+\subsubsection{Matplotlib and Seaborn}
+% TODO: Add visualization details
+
+\subsubsection{PyTorch Grad-CAM}
+% TODO: Add Grad-CAM details
+
+\subsubsection{Custom Visualization Functions}
+% TODO: Add custom functions
+
+\section{Advanced Deep Learning Techniques Implemented}
+
+\subsection{Semantic Segmentation}
+
+\subsubsection{DeepLabV3+ Architecture}
+% TODO: Add architecture details
+
+\subsubsection{One-hot Encoding Implementation}
+% TODO: Add encoding details
+
+\subsubsection{Multi-class Output Handling}
+% TODO: Add multi-class details
+
+\subsection{Loss Functions and Optimization}
+
+\subsubsection{Dice Loss Application}
+% TODO: Add Dice loss details
+
+\subsubsection{IoU Metrics Implementation}
+% TODO: Add IoU details
+
+\subsubsection{Learning Rate Scheduling}
+% TODO: Add LR scheduling details
+
+\subsection{Model Interpretability}
+
+\subsubsection{Grad-CAM Integration}
+% TODO: Add Grad-CAM integration
+
+\subsubsection{Semantic Segmentation Targeting}
+% TODO: Add targeting details
+
+\subsubsection{Multi-layer Analysis}
+% TODO: Add multi-layer analysis
+
+\section{Data Engineering and Preprocessing}
+
+\subsection{Medical Image Handling}
+
+\subsubsection{Format Compatibility}
+% TODO: Add format details
+
+\subsubsection{Color Space Management}
+% TODO: Add color space details
+
+\subsubsection{Dimension Standardization}
+% TODO: Add dimension details
+
+\subsection{Dataset Management}
+
+\subsubsection{Pandas Integration}
+% TODO: Add pandas details
+
+\subsubsection{Split Strategy Implementation}
+% TODO: Add split strategy
+
+\subsubsection{Batch Processing Optimization}
+% TODO: Add batch processing
+
+\subsection{Augmentation Strategies}
+
+\subsubsection{Spatial Augmentations}
+% TODO: Add spatial augmentations
+
+\subsubsection{Validation Augmentations}
+% TODO: Add validation augmentations
+
+\subsubsection{Custom Transform Pipelines}
+% TODO: Add custom pipelines
+
+\section{Deployment and Interface Development}
+
+\subsection{Web Interface Creation}
+
+\subsubsection{Gradio Framework Usage}
+% TODO: Add Gradio details
+
+\subsubsection{Real-time Processing}
+% TODO: Add real-time processing
+
+\subsubsection{Multi-output Visualization}
+% TODO: Add multi-output details
+
+\subsection{Production Considerations}
+
+\subsubsection{Model Serialization}
+% TODO: Add serialization details
+
+\subsubsection{Error Handling Implementation}
+% TODO: Add error handling
+
+\subsubsection{Memory Management}
+% TODO: Add memory management
+
+\section{Development Environment and Tools}
+
+\subsection{Cloud Computing Platform}
+
+\subsubsection{Google Colab Usage}
+% TODO: Add Colab details
+
+\subsubsection{Drive Integration}
+% TODO: Add Drive integration
+
+\subsubsection{Collaborative Development}
+% TODO: Add collaboration details
+
+\subsection{Code Organization}
+
+\subsubsection{Modular Programming}
+% TODO: Add modular programming
+
+\subsubsection{Reproducibility Measures}
+% TODO: Add reproducibility
+
+\subsubsection{Documentation Standards}
+% TODO: Add documentation
+
+\chapter{Comparative Analysis}
+
+\section{Task Complexity Comparison}
+
+\subsection{Classification vs Detection vs Segmentation}
+% TODO: Add task comparison
+
+\subsection{Computational Requirements}
+% TODO: Add computational comparison
+
+\subsection{Data Annotation Challenges}
+% TODO: Add annotation challenges
+
+\section{Modality-Specific Considerations}
+
+\subsection{Endoscopic vs MRI Challenges}
+% TODO: Add modality comparison
+
+\subsection{Resolution and Quality Differences}
+% TODO: Add resolution comparison
+
+\subsection{Clinical Workflow Integration}
+% TODO: Add workflow integration
+
+\chapter{Future Directions and Applications}
+
+\section{Potential Improvements}
+
+\subsection{Advanced Architectures}
+% TODO: Add architecture improvements
+
+\subsection{Data Enhancement Strategies}
+% TODO: Add data enhancement
+
+\subsection{Multi-modal Fusion}
+% TODO: Add multi-modal fusion
+
+\section{Clinical Translation}
+
+\subsection{Regulatory Considerations}
+% TODO: Add regulatory details
+
+\subsection{Hospital System Integration}
+% TODO: Add integration details
+
+\subsection{Physician Workflow Optimization}
+% TODO: Add workflow optimization
+
+\section{Research Opportunities}
+
+\subsection{Unexplored Applications}
+% TODO: Add unexplored applications
+
+\subsection{Cross-domain Knowledge Transfer}
+% TODO: Add knowledge transfer
+
+\subsection{Emerging Technologies}
+% TODO: Add emerging technologies
+
+\chapter{Lessons Learned and Personal Reflection}
+
+\section{Technical Insights}
+
+\subsection{Most Impactful Learning Experiences}
+% TODO: Add impactful experiences
+
+\subsection{Challenges Overcome}
+% TODO: Add challenges overcome
+
+\subsection{Problem-solving Approaches}
+% TODO: Add problem-solving approaches
+
+\section{Research Methodology}
+
+\subsection{Literature Review Strategies}
+% TODO: Add literature strategies
+
+\subsection{Experimental Design Principles}
+% TODO: Add experimental design
+
+\subsection{Documentation and Reproducibility}
+% TODO: Add documentation practices
+
+\section{Professional Development}
+
+\subsection{Skills Gap Identification}
+% TODO: Add skills gap analysis
+
+\subsection{Career Implications}
+% TODO: Add career implications
+
+\subsection{Continued Learning Plans}
+% TODO: Add learning plans
+
+\chapter{Conclusion}
+
+\section{Summary of Achievements}
+% TODO: Add achievement summary
+
+\section{Contribution to the Field}
+% TODO: Add field contribution
+
+\section{Impact of Learning Experience}
+% TODO: Add learning impact
+
+% Bibliography
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+% Appendices
+\appendix
+
+\chapter{Key Code Implementations}
+
+\section{Custom Dataset Class}
+\begin{lstlisting}[language=Python, caption=EndoscopyDataset Implementation]
+class EndoscopyDataset(torch.utils.data.Dataset):
+    def __init__(self, df, class_rgb_values=None, augmentation=None, preprocessing=None):
+        self.image_paths = df['png_image_path'].tolist()
+        self.mask_paths = df['png_mask_path'].tolist()
+        self.class_rgb_values = class_rgb_values
+        self.augmentation = augmentation
+        self.preprocessing = preprocessing
+
+    def __getitem__(self, i):
+        # read images and masks
+        image = cv2.cvtColor(cv2.imread(self.image_paths[i]), cv2.COLOR_BGR2RGB)
+        mask = cv2.cvtColor(cv2.imread(self.mask_paths[i]), cv2.COLOR_BGR2RGB)
+        
+        # one-hot-encode the mask
+        mask = one_hot_encode(mask, self.class_rgb_values).astype('float')
+        
+        # apply augmentations
+        if self.augmentation:
+            sample = self.augmentation(image=image, mask=mask)
+            image, mask = sample['image'], sample['mask']
+
+        # apply preprocessing
+        if self.preprocessing:
+            sample = self.preprocessing(image=image, mask=mask)
+            image, mask = sample['image'], sample['mask']
+
+        return image, mask
+
+    def __len__(self):
+        return len(self.image_paths)
+\end{lstlisting}
+
+\section{One-Hot Encoding for Medical Masks}
+\begin{lstlisting}[language=Python, caption=One-Hot Encoding Implementation]
+def one_hot_encode(label, label_values):
+    semantic_map = []
+    for colour in label_values:
+        equality = np.equal(label, colour)
+        class_map = np.all(equality, axis = -1)
+        semantic_map.append(class_map)
+    semantic_map = np.stack(semantic_map, axis=-1)
+    return semantic_map
+
+def reverse_one_hot(image):
+    x = np.argmax(image, axis = -1)
+    return x
+
+def colour_code_segmentation(image, label_values):
+    colour_codes = np.array(label_values)
+    x = colour_codes[image.astype(int)]
+    return x
+\end{lstlisting}
+
+\section{Bounding Box Generation from Segmentation}
+\begin{lstlisting}[language=Python, caption=Bounding Box Generation]
+def get_bounding_boxes(mask, target_class_idx=1, min_area=10):
+    """
+    Extract bounding boxes for a specific class index from a mask.
+    """
+    # If mask is one-hot encoded or has probabilities
+    if mask.ndim == 3:
+        mask_gray = np.argmax(mask, axis=-1)  # Get class indices
+    else:
+        mask_gray = mask
+
+    # Convert to binary mask for target class
+    binary_mask = (mask_gray == target_class_idx).astype(np.uint8) * 255
+
+    # Find contours
+    contours, _ = cv2.findContours(binary_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+    boxes = []
+    for cnt in contours:
+        if cv2.contourArea(cnt) >= min_area:  # filter tiny noise
+            x, y, w, h = cv2.boundingRect(cnt)
+            boxes.append((x, y, w, h))
+    return boxes
+
+def draw_boxes(image, boxes, color=(0, 255, 0), thickness=2):
+    """
+    Draw rectangles on image from list of boxes.
+    """
+    img_copy = image.copy()
+    for (x, y, w, h) in boxes:
+        cv2.rectangle(img_copy, (x, y), (x + w, y + h), color, thickness)
+    return img_copy
+\end{lstlisting}
+
+\section{Grad-CAM Implementation for Medical Images}
+\begin{lstlisting}[language=Python, caption=Grad-CAM Implementation]
+from pytorch_grad_cam import GradCAM
+from pytorch_grad_cam.utils.model_targets import SemanticSegmentationTarget
+from pytorch_grad_cam.utils.image import show_cam_on_image
+
+# Set model to eval mode
+model.eval()
+model.to(DEVICE)
+
+# Prepare input tensor
+input_tensor = torch.from_numpy(image).permute(2, 0, 1).unsqueeze(0).float()
+
+# Pad to ensure divisibility
+_, _, h, w = input_tensor.shape
+pad_h = (16 - h % 16) % 16
+pad_w = (16 - w % 16) % 16
+input_tensor = torch.nn.functional.pad(
+    input_tensor, (0, pad_w, 0, pad_h), mode='reflect'
+).to(DEVICE)
+
+# Target layer selection
+target_layers = [model.encoder.layer4[-1]]
+
+# Create targets for semantic segmentation
+target_mask = reverse_one_hot(mask).squeeze()
+targets = [SemanticSegmentationTarget(1, target_mask)]
+
+# Generate Grad-CAM
+cam = GradCAM(model=model, target_layers=target_layers)
+grayscale_cam = cam(input_tensor=input_tensor, targets=targets)[0]
+
+# Normalize RGB image
+rgb_image = np.pad(image, ((0, pad_h), (0, pad_w), (0, 0)), mode='reflect')
+rgb_image = (rgb_image - rgb_image.min()) / (rgb_image.max() - rgb_image.min())
+
+# Create CAM visualization
+cam_image = show_cam_on_image(rgb_image, grayscale_cam, use_rgb=True)
+\end{lstlisting}
+
+\chapter{Model Configuration and Training Setup}
+
+\section{DeepLabV3+ Architecture Configuration}
+\begin{lstlisting}[language=Python, caption=Model Configuration]
+# Model parameters
+ENCODER = 'resnet50'
+ENCODER_WEIGHTS = 'imagenet'
+CLASSES = ['background', 'polyp']
+ACTIVATION = 'sigmoid'
+
+# Model initialization
+model = smp.DeepLabV3Plus(
+    encoder_name=ENCODER,
+    encoder_weights=ENCODER_WEIGHTS,
+    classes=len(CLASSES),
+    activation=ACTIVATION,
+)
+
+# Get preprocessing function
+preprocessing_fn = smp.encoders.get_preprocessing_fn(ENCODER, ENCODER_WEIGHTS)
+\end{lstlisting}
+
+\section{Training Configuration}
+\begin{lstlisting}[language=Python, caption=Training Setup]
+# Loss function and metrics
+loss = smp.utils.losses.DiceLoss()
+metrics = [smp.utils.metrics.IoU(threshold=0.5)]
+
+# Optimizer setup
+optimizer = torch.optim.Adam([
+    dict(params=model.parameters(), lr=0.00008),
+])
+
+# Learning rate scheduler
+lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(
+    optimizer, T_0=1, T_mult=2, eta_min=5e-5,
+)
+
+# Training and validation epochs
+train_epoch = smp.utils.train.TrainEpoch(
+    model,
+    loss=loss,
+    metrics=metrics,
+    optimizer=optimizer,
+    device=DEVICE,
+    verbose=True,
+)
+
+valid_epoch = smp.utils.train.ValidEpoch(
+    model,
+    loss=loss,
+    metrics=metrics,
+    device=DEVICE,
+    verbose=True,
+)
+\end{lstlisting}
+
+\section{Training Loop Implementation}
+\begin{lstlisting}[language=Python, caption=Training Loop]
+# Training parameters
+TRAINING = True
+EPOCHS = 15
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+if TRAINING:
+    best_iou_score = 0.0
+    train_logs_list, valid_logs_list = [], []
+
+    for i in range(0, EPOCHS):
+        # Perform training & validation
+        print('\nEpoch: {}'.format(i))
+        train_logs = train_epoch.run(train_loader)
+        valid_logs = valid_epoch.run(valid_loader)
+        train_logs_list.append(train_logs)
+        valid_logs_list.append(valid_logs)
+
+        # Save model if a better val IoU score is obtained
+        if best_iou_score < valid_logs['iou_score']:
+            best_iou_score = valid_logs['iou_score']
+            torch.save(model, './best_model.pth')
+            print('Model saved!')
+\end{lstlisting}
+
+\chapter{Data Augmentation and Preprocessing Pipelines}
+
+\section{Augmentation Strategies}
+\begin{lstlisting}[language=Python, caption=Augmentation Functions]
+import albumentations as album
+
+def get_training_augmentation():
+    """Training augmentations with spatial consistency"""
+    train_transform = [
+        album.HorizontalFlip(p=0.5),
+    ]
+    return album.Compose(train_transform)
+
+def get_validation_augmentation():
+    """Validation augmentations for consistent input size"""
+    test_transform = [
+        album.PadIfNeeded(min_height=288, min_width=384, always_apply=True, border_mode=0),
+    ]
+    return album.Compose(test_transform)
+
+def to_tensor(x, **kwargs):
+    """Convert numpy array to tensor format (HWC -> CHW)"""
+    return x.transpose(2, 0, 1).astype('float32')
+
+def get_preprocessing(preprocessing_fn=None):
+    """Create preprocessing pipeline"""
+    _transform = []
+    if preprocessing_fn:
+        _transform.append(album.Lambda(image=preprocessing_fn))
+    _transform.append(album.Lambda(image=to_tensor, mask=to_tensor))
+    return album.Compose(_transform)
+\end{lstlisting}
+
+\section{Dataset Initialization}
+\begin{lstlisting}[language=Python, caption=Dataset Creation]
+# Training dataset with augmentations
+train_dataset = EndoscopyDataset(
+    tra_df,
+    augmentation=get_training_augmentation(),
+    preprocessing=get_preprocessing(preprocessing_fn),
+    class_rgb_values=select_class_rgb_values,
+)
+
+# Validation dataset
+valid_dataset = EndoscopyDataset(
+    val_df,
+    augmentation=get_validation_augmentation(),
+    preprocessing=get_preprocessing(preprocessing_fn),
+    class_rgb_values=select_class_rgb_values,
+)
+
+# Data loaders
+train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True, num_workers=4)
+valid_loader = DataLoader(valid_dataset, batch_size=16, shuffle=False, num_workers=4)
+\end{lstlisting}
+
+\chapter{Interactive Interface Implementation}
+
+\section{Gradio Web Application}
+\begin{lstlisting}[language=Python, caption=Gradio Interface]
+import gradio as gr
+
+def predict_polyp_segmentation(image_input):
+    """Main prediction function for Gradio interface"""
+    image_np = np.array(image_input)
+
+    # Preprocess input
+    image, true_dimensions = preprocess_input(image_np)
+    x_tensor = torch.from_numpy(image).unsqueeze(0).to(DEVICE)
+
+    # Predict segmentation mask
+    with torch.no_grad():
+        pred_mask = best_model(x_tensor)
+        pred_mask = pred_mask.squeeze().cpu().numpy()
+
+    pred_mask = np.transpose(pred_mask, (1, 2, 0))
+
+    # Generate outputs
+    polyp_class_idx = select_classes.index('polyp')
+    binary_mask = (pred_mask[:, :, polyp_class_idx] > 0.5).astype(np.uint8)
+    binary_mask = crop_image(binary_mask, true_dimensions)['image']
+
+    # Get bounding boxes
+    boxes = get_bounding_boxes(binary_mask, target_class_idx=1)
+    boxed_image = draw_boxes(image_np, boxes)
+
+    # Create visualizations
+    pred_heatmap = crop_image(pred_mask[:, :, polyp_class_idx], true_dimensions)['image']
+    pred_segmentation = crop_image(
+        colour_code_segmentation(reverse_one_hot(pred_mask), select_class_rgb_values),
+        true_dimensions
+    )['image']
+
+    # Generate Grad-CAM
+    input_tensor = torch.nn.functional.pad(x_tensor, (0, 0, 0, 0), mode='reflect')
+    rgb_image = (image_np - image_np.min()) / (image_np.max() - image_np.min())
+    rgb_image = rgb_image.astype(np.float32)
+
+    cam = GradCAM(model=model, target_layers=[model.encoder.layer4[-1]])
+    targets = [SemanticSegmentationTarget(1, reverse_one_hot(pred_mask))]
+    grayscale_cam = cam(input_tensor=input_tensor, targets=targets)[0]
+
+    # Resize CAM to match input
+    grayscale_cam_resized = cv2.resize(grayscale_cam, (rgb_image.shape[1], rgb_image.shape[0]))
+    cam_image = show_cam_on_image(rgb_image, grayscale_cam_resized, use_rgb=True)
+
+    return [image_np, pred_segmentation, pred_heatmap, cam_image, boxed_image]
+
+# Create Gradio interface
+interface = gr.Interface(
+    fn=predict_polyp_segmentation,
+    inputs=gr.Image(type="numpy", label="Upload Colonoscopy Frame"),
+    outputs=[
+        gr.Image(type="numpy", label="Original Image"),
+        gr.Image(type="numpy", label="Predicted Segmentation"),
+        gr.Image(type="numpy", label="Polyp Heatmap"),
+        gr.Image(type="numpy", label="Grad-CAM Overlay"),
+        gr.Image(type="numpy", label="Bounding Boxes")
+    ],
+    title="Polyp Segmentation in Colonoscopy Frames",
+    description="Upload an endoscopic image to get polyp segmentation prediction using DeepLabV3+."
+)
+
+# Launch interface
+interface.launch(debug=True, share=True)
+\end{lstlisting}
+
+\section{Preprocessing Helper Functions}
+\begin{lstlisting}[language=Python, caption=Preprocessing Functions]
+def preprocess_input(image_np):
+    """Preprocess input image for model inference"""
+    true_dimensions = image_np.shape[:2]
+    image_rgb = cv2.cvtColor(image_np, cv2.COLOR_BGR2RGB)
+
+    # Apply resizing or padding if required
+    padded = get_validation_augmentation()(image=image_rgb)
+    image = padded['image']
+
+    # Apply preprocessing
+    preprocessed = get_preprocessing(preprocessing_fn)(image=image)
+    image = preprocessed['image']
+
+    return image, true_dimensions
+
+def crop_image(image, true_dimensions):
+    """Crop image to original dimensions"""
+    return album.CenterCrop(p=1, height=true_dimensions[0], width=true_dimensions[1])(image=image)
+\end{lstlisting}
+
+\chapter{Performance Metrics and Evaluation}
+
+\section{Model Evaluation}
+\begin{lstlisting}[language=Python, caption=Model Evaluation]
+# Create test dataset and dataloader
+test_dataset = EndoscopyDataset(
+    val_df,
+    augmentation=get_validation_augmentation(),
+    preprocessing=get_preprocessing(preprocessing_fn),
+    class_rgb_values=select_class_rgb_values,
+)
+
+test_dataloader = DataLoader(test_dataset)
+
+# Evaluate model performance
+test_epoch = smp.utils.train.ValidEpoch(
+    model,
+    loss=loss,
+    metrics=metrics,
+    device=DEVICE,
+    verbose=True,
+)
+
+valid_logs = test_epoch.run(test_dataloader)
+print("Evaluation on Test Data: ")
+print(f"Mean IoU Score: {valid_logs['iou_score']:.4f}")
+print(f"Mean Dice Loss: {valid_logs['dice_loss']:.4f}")
+\end{lstlisting}
+
+\section{Visualization Functions}
+\begin{lstlisting}[language=Python, caption=Visualization Utilities]
+def visualize(**images):
+    """Display multiple images in a single plot"""
+    n_image = len(images)
+    plt.figure(figsize=(20,8))
+    for idx, (name, image) in enumerate(images.items()):
+        plt.subplot(1, n_image, idx + 1)
+        plt.xticks([])
+        plt.yticks([])
+        plt.title(name.replace('_',' ').title(), fontsize=20)
+        plt.imshow(image)
+    plt.show()
+\end{lstlisting}
+
+\chapter{Dataset Structure and Metadata}
+
+\section{Data Organization}
+\begin{lstlisting}[language=Python, caption=Dataset Loading and Organization]
+# Mount Google Drive
+from google.colab import drive
+drive.mount('/content/drive')
+
+# Set data directory
+DATA_DIR = '/content/drive/MyDrive/Dataset'
+
+# Load metadata
+metadata_df = pd.read_csv(os.path.join(DATA_DIR, 'metadata.csv'))
+metadata_df = metadata_df[['frame_id', 'png_image_path', 'png_mask_path']]
+
+# Update paths to absolute paths
+metadata_df['png_image_path'] = metadata_df['png_image_path'].apply(
+    lambda img_pth: os.path.join(DATA_DIR, img_pth)
+)
+metadata_df['png_mask_path'] = metadata_df['png_mask_path'].apply(
+    lambda img_pth: os.path.join(DATA_DIR, img_pth)
+)
+
+# Shuffle dataset
+metadata_df = metadata_df.sample(frac=1).reset_index(drop=True)
+
+# Create train-validation split
+val_df = metadata_df.sample(frac=0.2, random_state=42)
+tra_df = metadata_df.drop(val_df.index)
+
+print(f"Training samples: {len(tra_df)}")
+print(f"Validation samples: {len(val_df)}")
+\end{lstlisting}
+
+\section{Class Dictionary and RGB Values}
+\begin{lstlisting}[language=Python, caption=Class Configuration]
+# Load class dictionary
+class_dict = pd.read_csv(os.path.join(DATA_DIR, 'class_dict.csv'))
+
+# Extract class information
+class_names = class_dict['class_names'].tolist()
+class_rgb_values = class_dict[['r','g','b']].values.tolist()
+
+print('All dataset classes and their corresponding RGB values in labels:')
+print('Class Names: ', class_names)
+print('Class RGB values: ', class_rgb_values)
+
+# Select specific classes for binary segmentation
+select_classes = ['background', 'polyp']
+select_class_indices = [class_names.index(cls.lower()) for cls in select_classes]
+select_class_rgb_values = np.array(class_rgb_values)[select_class_indices]
+
+print('Selected classes and their corresponding RGB values in labels:')
+print('Class Names: ', select_classes)
+print('Class RGB values: ', select_class_rgb_values)
+\end{lstlisting}
+
+\chapter{Additional Results and Analysis}
+
+\section{Sample Prediction Generation}
+\begin{lstlisting}[language=Python, caption=Batch Prediction Processing]
+# Create directories for saving results
+sample_preds_folder = 'sample_predictions/'
+sample_boxes_folder = 'sample_predictions_boxes/'
+if not os.path.exists(sample_preds_folder):
+    os.makedirs(sample_preds_folder, exist_ok=True)
+    os.makedirs(sample_boxes_folder, exist_ok=True)
+
+# Generate predictions for all test samples
+for idx in range(len(test_dataset)):
+    image, gt_mask = test_dataset[idx]
+    image_vis = test_dataset_vis[idx][0].astype('uint8')
+    true_dimensions = image_vis.shape
+
+    # Predict
+    x_tensor = torch.from_numpy(image).to(DEVICE).unsqueeze(0)
+    pred_mask = best_model(x_tensor)
+    pred_mask = pred_mask.detach().squeeze().cpu().numpy()
+    pred_mask = np.transpose(pred_mask, (1, 2, 0))
+
+    # Generate binary mask and bounding boxes
+    polyp_class_idx = select_classes.index('polyp')
+    binary_mask = (pred_mask[:, :, polyp_class_idx] > 0.5).astype(np.uint8)
+    binary_mask = crop_image(binary_mask, true_dimensions)['image']
+    boxes = get_bounding_boxes(binary_mask, target_class_idx=1)
+    boxed_image = draw_boxes(image_vis, boxes)
+
+    # Create colored visualizations
+    pred_mask_colored = crop_image(
+        colour_code_segmentation(reverse_one_hot(pred_mask), select_class_rgb_values),
+        true_dimensions
+    )['image']
+
+    gt_mask = np.transpose(gt_mask, (1, 2, 0))
+    gt_mask = crop_image(
+        colour_code_segmentation(reverse_one_hot(gt_mask), select_class_rgb_values),
+        true_dimensions
+    )['image']
+
+    # Save results
+    triplet = np.hstack([image_vis, gt_mask, pred_mask_colored])
+    cv2.imwrite(os.path.join(sample_preds_folder, f"sample_pred_{idx}.png"), 
+                triplet[:, :, ::-1])
+    cv2.imwrite(os.path.join(sample_boxes_folder, f"sample_pred_boxes_{idx}.png"), 
+                boxed_image[:, :, ::-1])
+
+    # Display results
+    visualize(
+        original_image=image_vis,
+        ground_truth_mask=gt_mask,
+        predicted_mask=pred_mask_colored,
+        bounding_box_image=boxed_image,
+        pred_polyp_heatmap=crop_image(pred_mask[:, :, polyp_class_idx], true_dimensions)['image']
+    )
+\end{lstlisting}
+
+% TODO: Add references to your bibliography file
+% Create a references.bib file with your citations
+
+\end{document}
